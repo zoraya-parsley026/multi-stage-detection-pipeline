@@ -1,0 +1,45 @@
+[project]
+name = "multi-stage-detection-pipeline"
+version = "0.0.01"
+description = ""
+authors = [
+    {name = "zoey.parsley026"},
+]
+dependencies = [
+    "customtkinter",
+    "docopt",
+    "matplotlib",
+    "numpy<2.0",
+    "opencv-python",
+    "onnxruntime",          
+    "pandas",
+    "Pillow",
+    "protobuf",
+    "PyYAML",
+    "requests",
+    "scipy",
+    "seaborn",
+    "tensorboard",
+    "torch==2.0.0",
+    "torchvision==0.15.1",
+    "torchaudio==2.0.1",
+    "tqdm>=4.67.1",
+]
+
+requires-python = ">=3.10, <3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+classifiers = [
+  "Private :: Do Not Upload"
+]
+
+[[tool.pdm.source]]
+name = "private"
+url = "https://download.pytorch.org/whl/cpu"
+include_packages = ["torch", "torchvision", "torchaudio"]
+exclude_packages = ["*"]
