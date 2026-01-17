@@ -1,0 +1,27 @@
+{
+  "name": "multi-stage-detection-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "",
+    "prepare": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoey-parsley026/multi-stage-detection-pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoey-parsley026/multi-stage-detection-pipeline/issues"
+  },
+  "homepage": "https://github.com/zoey-parsley026/multi-stage-detection-pipeline#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "husky": "^8.0.0"
+  }
+}
