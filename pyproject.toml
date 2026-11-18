@@ -10,7 +10,7 @@ dependencies = [
     "docopt",
     "matplotlib",
     "numpy<2.0",
-    "opencv-python",
+    "opencv-python>=4.11.0.86",
     "onnxruntime",          
     "pandas",
     "Pillow",
@@ -24,6 +24,8 @@ dependencies = [
     "torchvision==0.15.1",
     "torchaudio==2.0.1",
     "tqdm>=4.67.1",
+    "pydantic>=2.0",
+    "typing-extensions>=4.16.0",
 ]
 
 requires-python = ">=3.10, <3.12"
@@ -43,3 +45,18 @@ name = "private"
 url = "https://download.pytorch.org/whl/cpu"
 include_packages = ["torch", "torchvision", "torchaudio"]
 exclude_packages = ["*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--import-mode=importlib --strict-markers -ra"
+markers = [
+    "unit: deterministic tests using synthetic data or mocked model backends",
+    "integration: tests requiring local model files or saved reference arrays",
+    "requires_files(*paths): skip when specified repository-relative assets are absent",
+]

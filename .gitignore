@@ -299,8 +299,6 @@ FakesAssemblies/
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
-node_modules/
-
 # Visual Studio 6 build log
 *.plg
 
@@ -435,17 +433,25 @@ pdm.lock
 # Environment variables
 .env
 
-# Node
-node_modules/
-package-lock.json
+#
+preprocessed_*
 
-# Husky Git hooks
-.husky/
+#
+images/
+labels/
 
-# NPM Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+#
+check/
+notebooks/
+tests/
+configuration/
+in_data/
+weights/
 
-# Commitlint configuration
-commitlint.config.js
+.vscode
+.pdm-build
+.pytest_cache
+.python-version
+
+docs
+
